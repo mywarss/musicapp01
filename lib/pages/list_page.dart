@@ -21,8 +21,28 @@ class _ListPageState extends State<ListPage> {
             ),
             border: Border.all(
               width: 2,
-              color: AppColors.darkBlue,
-            )),
+              color: AppColors.mainColor,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.lightBlueShadow,
+                blurRadius: 10,
+                offset: Offset(5, 5),
+                spreadRadius: 3,
+              ),
+              BoxShadow(
+                color: AppColors.lightBlueShadow,
+                blurRadius: 5,
+                offset: Offset(-5, -5),
+                spreadRadius: 3,
+              ),
+            ],
+            gradient: RadialGradient(colors: [
+              AppColors.mainColor,
+              AppColors.mainColor,
+              AppColors.mainColor,
+              Colors.white,
+            ])),
         child: Icon(Icons.favorite),
       )),
     );
